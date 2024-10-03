@@ -6,7 +6,7 @@ SESSION_CONFIGS = [
         name='sender_receiver_game',
         display_name="Sender-Receiver Game",
         num_demo_participants=2,
-        app_sequence=['consent','welcome','sender_receiver_game'],
+        app_sequence=['consent','welcome','sender_receiver_game', 'survey', 'payment_info'],
         num_rounds=3,
     ),
 ]
