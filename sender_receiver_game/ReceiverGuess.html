@@ -1,0 +1,18 @@
+{{ block title }}
+    Receiver's Guess
+{{ endblock }}
+{{ block content }}
+
+    <p>
+    You are the Receiver. The Sender's message is: "The secret number is {{ group.sender_message }}."
+    </p>
+
+    <p>
+    Please enter your guess for the secret number. You can enter any number between 1 and 5, including decimals.
+    </p>
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}

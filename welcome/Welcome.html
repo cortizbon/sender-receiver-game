@@ -1,0 +1,26 @@
+{{ block title }}
+    Welcome!
+{{ endblock }}
+{{ block content }}
+
+    <p>
+    Welcome to the Sender-Receiver Game!
+    </p>
+
+    <p>
+    You have been assigned the role of {{ player.role }}. You will keep this role for all 24 rounds of the game.
+    </p>
+
+    <p>
+    In each round:
+    <ul>
+        <li>A secret number (0-6) will be generated.</li>
+        <li>If you're a Sender, you'll send a message about the secret number.</li>
+        <li>If you're a Receiver, you'll guess the secret number based on the Sender's message.</li>
+        <li>Both players can earn a bonus of 5000 pesos based on the outcome.</li>
+    </ul>
+    </p>
+
+    {{ next_button }}
+
+{{ endblock }}

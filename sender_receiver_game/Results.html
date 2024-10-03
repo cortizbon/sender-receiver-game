@@ -1,0 +1,29 @@
+{{ block title }}
+    Results
+{{ endblock }}
+{{ block content }}
+
+    <p>
+    The secret number was: {{ secret_number }}
+    </p>
+
+    <p>
+    The Sender's message was: {{ sender_message }}
+    </p>
+
+    <p>
+    The Receiver's guess was: {{ receiver_guess }}
+    </p>
+
+    <p>
+    The Sender's payoff: {{ sender_payoff }}
+    </p>
+
+    <p>
+    The Receiver's payoff: {{ receiver_payoff }}
+    </p>
+
+    {{ next_button }}
+
+{{ endblock }}
+
