@@ -49,41 +49,18 @@ class Player(BasePlayer):
     )
 
     chosen_role = models.IntegerField(
-        choices=[[1, 'Participant A'],
-                 [2, 'Participant B'],
+        choices=[[1, 'Sender'],
+                 [2, 'Receiver'],
                  [0, 'Indifferent'],
                  ],
-        label='Imagine you were to play the same game again and had a choice, would you rather be Participant A  or Participant B'
+        label='Imagine you were to play the same game again and had a choice, would you rather be Sender or Receiver'
     )
 
-    religion = models.IntegerField(
-        choices=[[1, 'Baha\'i'],
-                 [2, 'Buddhism'],
-                 [3, 'Candomble'],
-                 [4, 'Christianity (e.g. Baptist, Church of England, Roman Catholic, Methodist, Jehovah Witness, etc.)'],
-                 [5, 'Hinduism'],
-                 [6, 'Islam'],
-                 [7, 'Jainism'],
-                 [8, 'Judaism'],
-                 [9, 'Non Religious (e.g. Agnostic, Atheist, No Religion)'],
-                 [10, 'Paganism'],
-                 [11, 'Rastafari'],
-                 [12, 'Santeria'],
-                 [13, 'Shinto'],
-                 [14, 'Sikhism'],
-                 [15, 'Spiritualism'],
-                 [16, 'Taoism'],
-                 [17, 'Unitarianism'],
-                 [18, 'Zorastrianism'],
-                 [19, 'Other'],
-                 [0, 'Do Not Wish to Answer'],
-                 ],
-        label='What is your religious affiliation?'
-    )
+    
 
 class Demographics(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender',  'education', 'student', 'experiments', 'reasoning', 'chosen_role', 'religion']
+    form_fields = ['age', 'gender',  'education', 'student', 'experiments', 'reasoning', 'chosen_role']
 
 
 page_sequence = [Demographics]
